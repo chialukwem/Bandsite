@@ -1,0 +1,62 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+@use "./mixins" as *;
+
+// Resets
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Avenir";
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary--color_black;
+  height: 33vw;
+  padding: 1rem 0;
+
+  &__logo {
+    height: 1.25rem;
+    margin: 0.5rem 0;
+  }
+
+  &__nav--links {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+
+  &__nav--item {
+    box-sizing: border-box;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  &__nav--active {
+    font-weight: 600;
+    border-bottom: 0.25rem solid #ffffff;
+    text-align: center;
+  }
+
+  &__nav--inactive {
+    color: $primary--color_silver;
+  }
+}
