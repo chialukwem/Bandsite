@@ -140,5 +140,6 @@ body {
 .photo__gallery--items {
   display: flex;
   flex-direction: column;
-  align-content: space-around;
+  justify-content: space-between;
+  gap: 1rem;
 }/*# sourceMappingURL=bio.css.map */

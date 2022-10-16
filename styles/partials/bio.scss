@@ -43,10 +43,12 @@
 #photo__gallery {
   background-color: $secondary--color_mercury;
   padding: 16px 16px;
+  // height: 100%;
 }
 
 .photo__gallery--items {
   display: flex;
   flex-direction: column;
-  align-content: space-around;
+  justify-content: space-between;
+  gap: 1rem;
 }
