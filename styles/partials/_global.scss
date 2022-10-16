@@ -11,7 +11,8 @@
 
 html,
 body,
-ul {
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -42,6 +43,8 @@ a {
   display: flex;
   flex-direction: column;
   background-color: $primary--color_black;
+  justify-content: center;
+  align-items: center;
 
   &__logo {
     @include logo;
@@ -51,11 +54,10 @@ a {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
-    gap: 0.2rem;
+    gap: 0.3rem;
   }
 
   &__nav--item {
-    box-sizing: border-box;
     width: 100%;
     padding: 0.5rem 3rem;
     color: $primary--color_silver;
