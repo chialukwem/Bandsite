@@ -26,6 +26,32 @@ body {
   padding: 0;
 }
 
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: #323232;
+}
+
+p {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+.subheader {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -65,4 +91,54 @@ body {
 }
 .header__nav--inactive {
   color: #afafaf;
+}
+
+.paragraph__title {
+  font-size: 18px;
+  line-height: 22px;
+  padding-top: 16px;
+  font-weight: 600;
+}
+
+.page__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../../assets/images/hero-bio.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 12.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#about {
+  padding: 0 16px;
+}
+
+.header--img {
+  display: flex;
+  flex-direction: column;
+}
+
+.quote,
+.quote span {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+#photo__gallery {
+  background-color: #e1e1e1;
+  padding: 16px 16px;
+}
+
+.photo__gallery--items {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
 }/*# sourceMappingURL=bio.css.map */

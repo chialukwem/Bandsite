@@ -3,4 +3,50 @@
 @use "./fonts" as *;
 @use "./mixins" as *;
 
+.page__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
+    url("../../assets/images/hero-bio.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 12.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
 
+#about {
+  padding: 0 16px;
+}
+
+// img.header--img {
+//   max-height: 60vw;
+// }
+
+.header--img {
+  display: flex;
+  flex-direction: column;
+}
+
+.quote,
+.quote span {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+#photo__gallery {
+  background-color: $secondary--color_mercury;
+  padding: 16px 16px;
+}
+
+.photo__gallery--items {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
