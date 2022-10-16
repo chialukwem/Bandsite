@@ -3,6 +3,11 @@
 @use "./fonts" as *;
 @use "./mixins" as *;
 
+.footer h2 {
+  @include h2;
+  color: $primary--color_white;
+}
+
 .page__title {
   display: flex;
   justify-content: flex-start;
@@ -20,13 +25,10 @@
   margin-bottom: 1.5rem;
 }
 
-#about {
-  padding: 0 16px;
+#about,
+#photo__gallery {
+  @include body__padding;
 }
-
-// img.header--img {
-//   max-height: 60vw;
-// }
 
 .header--img {
   display: flex;
@@ -35,15 +37,14 @@
 
 .quote,
 .quote span {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
-  line-height: 22px;
+  line-height: 1.375rem;
 }
 
 #photo__gallery {
   background-color: $secondary--color_mercury;
-  padding: 16px 16px;
-  // height: 100%;
+  padding: 1rem;
 }
 
 .photo__gallery--items {
