@@ -1,0 +1,73 @@
+@use "./global" as *;
+@use "./variables" as *;
+@use "./fonts" as *;
+@use "./mixins" as *;
+
+/* Footer h2 color white */
+.footer h2 {
+  @include h2;
+  color: $primary--color_white;
+}
+
+/* Page title (subheader) */
+.page__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
+    url("../../assets/images/hero-bio.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 12.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* section paddings */
+#about,
+#photo__gallery {
+  @include body__padding;
+}
+
+/* about image */
+.header--img {
+  display: flex;
+  flex-direction: column;
+}
+
+/* quote styling */
+.quote,
+.quote span {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+}
+
+/* gallery section, grayscale*/
+#photo__gallery {
+  background-color: $secondary--color_mercury;
+  padding: 1rem;
+}
+
+.photo__gallery--items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.photo__gallery--items img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+}
+
+.photo__gallery--items img:hover {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+}

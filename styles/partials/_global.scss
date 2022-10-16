@@ -1,0 +1,112 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+@use "./mixins" as *;
+
+/* Resets */
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* General */
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+p {
+  @include p;
+}
+
+body {
+  font-family: "Avenir";
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Header/menu */
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary--color_black;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    @include logo;
+  }
+
+  &__nav--links {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    gap: 0.3rem;
+  }
+
+  &__nav--item {
+    width: 100%;
+    padding: 0.5rem 3rem;
+    color: $primary--color_silver;
+  }
+
+  &__nav--active {
+    font-weight: 600;
+    border-bottom: 0.25rem solid #ffffff;
+    color: $primary--color_white;
+  }
+}
+
+/* Paragraph title */
+.paragraph__title {
+  @include paragraph__title;
+}
+
+/* Footer */
+.footer {
+  background-color: $primary--color_black;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
+
+  &__icons {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__paragraph--title {
+    @include paragraph__title;
+    color: $primary--color_white;
+  }
+
+  &__paragraph--text {
+    @include p;
+    color: $primary--color_white;
+  }
+
+  &__bottom--text {
+    font-size: 0.625rem;
+    color: $primary--color_white;
+  }
+
+  &__bottom {
+    padding-top: 3rem;
+  }
+
+  &____bottom--logo {
+    @include logo;
+  }
+}
