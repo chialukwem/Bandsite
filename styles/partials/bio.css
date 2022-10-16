@@ -1,4 +1,6 @@
-/*Secondary Colors*/
+/* primary colors */
+/* secondary Colors*/
+/* breakpoints */
 @font-face {
   font-family: "Avenir";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
@@ -14,6 +16,12 @@
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
   font-weight: 700;
 }
+/* h2 mixin */
+/* body padding mixin - This will give the sections a padding*/
+/* paragraph title mixin */
+/* p mixin */
+/* logo styling mixin */
+/* Resets */
 *,
 *::before,
 ::after {
@@ -21,11 +29,13 @@
 }
 
 html,
-body {
+body,
+ul {
   margin: 0;
   padding: 0;
 }
 
+/* General */
 h1 {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -39,11 +49,6 @@ p {
   font-weight: 400;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: "Avenir";
 }
@@ -53,12 +58,7 @@ a {
   text-decoration: none;
 }
 
-.subheader {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
-}
-
+/* Header/menu */
 .header {
   display: flex;
   flex-direction: column;
@@ -86,6 +86,7 @@ a {
   color: #ffffff;
 }
 
+/* Paragraph title */
 .paragraph__title {
   font-size: 1rem;
   line-height: 1.375rem;
@@ -93,6 +94,7 @@ a {
   font-weight: 600;
 }
 
+/* Footer */
 .footer {
   background-color: #323232;
   display: flex;
@@ -128,6 +130,7 @@ a {
   margin: 1rem 0;
 }
 
+/* Footer h2 color white */
 .footer h2 {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -136,6 +139,7 @@ a {
   color: #ffffff;
 }
 
+/* Page title (subheader) */
 .page__title {
   display: flex;
   justify-content: flex-start;
@@ -152,16 +156,19 @@ a {
   margin-bottom: 1.5rem;
 }
 
+/* section paddings */
 #about,
 #photo__gallery {
   padding: 0 1rem;
 }
 
+/* about image */
 .header--img {
   display: flex;
   flex-direction: column;
 }
 
+/* quote styling */
 .quote,
 .quote span {
   font-size: 0.875rem;
@@ -169,6 +176,7 @@ a {
   line-height: 1.375rem;
 }
 
+/* gallery section, grayscale*/
 #photo__gallery {
   background-color: #e1e1e1;
   padding: 1rem;
@@ -179,4 +187,16 @@ a {
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.photo__gallery--items img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+}
+
+.photo__gallery--items img:hover {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
 }/*# sourceMappingURL=bio.css.map */

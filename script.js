@@ -1,3 +1,5 @@
+// Change active link when clicked
+
 // Get the container element
 let navContainer = document.getElementById("nav__links");
 
