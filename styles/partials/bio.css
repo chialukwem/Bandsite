@@ -76,16 +76,14 @@ a {
 }
 .header__nav--item {
   box-sizing: border-box;
-  color: #ffffff;
   width: 100%;
   padding: 0.5rem 3rem;
+  color: #afafaf;
 }
 .header__nav--active {
   font-weight: 600;
   border-bottom: 0.25rem solid #ffffff;
-}
-.header__nav--inactive {
-  color: #afafaf;
+  color: #ffffff;
 }
 
 .paragraph__title {
