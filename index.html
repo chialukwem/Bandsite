@@ -117,32 +117,22 @@
       </div>
     </section>
 
-    <section>
+    <section class="comment">
       <h2>Join the Conversation</h2>
-      <div class="form__area">
-        <img
-          src="./assets/images/Mohan-muruge.jpg"
-          class="profile-image"
-          alt="Mohan-muruge"
-        />
-        <form>
-          <label for="fname">Name</label><br />
-          <input
-            type="text"
-            id="fname"
-            name="fname"
-            placeholder="Enter your name"
-          /><br />
-          <label for="lname">Comment</label><br />
-          <input
-            type="textarea"
-            id="comment"
-            name="lname"
-            placeholder="Add a new comment"
-          /><br /><br />
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
+        <div class="comment__form">
+            <img src="./assets/images/Mohan-muruge.jpg" class="comment__form__avatar" id="commentform" alt="Mohan-muruge"/>
+            <form action="" method="post" class="comment__form__fields">
+                <label for="name" class="comment__label">NAME</label><br />
+                <input type="text" id="name" name="name" placeholder="Enter your name"/><br />
+                <label for="comment" class="comment__label">COMMENT</label><br />
+                <textarea type="textarea" id="comment" name="comment" placeholder="Add a new comment"/></textarea><br />
+                <button type="submit" class="comment__button">COMMENT</button>
+            </form>
+        </div>
+
+        <div>
+            
+        </div>
     </section>
 
     <footer class="footer">
