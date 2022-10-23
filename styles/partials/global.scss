@@ -1,0 +1,268 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+@use "./mixins" as *;
+
+/* Resets */
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* General */
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+
+  @include tablet {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+
+  @include desktop {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+}
+
+h2 {
+  @include tablet {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+
+  @include desktop {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+
+p {
+  @include p;
+  @include tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+body {
+  font-family: "Avenir";
+}
+
+a {
+  color: $primary--color_white;
+  text-decoration: none;
+}
+
+/* Header/menu */
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary--color_black;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__nav {
+    width: 100%;
+  }
+
+  &__nav-item--active {
+    font-weight: 600;
+    color: $primary--color_white;
+    border-bottom: 0.3rem solid #ffffff;
+  }
+
+  &__nav-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: $primary--color_white;
+  }
+
+  &__nav-item {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0rem;
+    width: 50%;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    &__nav-links {
+      justify-content: flex-start;
+      align-content: center;
+      list-style-type: none;
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+
+    &__nav-item {
+      width: auto;
+      text-align: center;
+      padding: 2rem 0rem;
+      height: 100%;
+    }
+  }
+
+  @include desktop {
+    &__nav-links {
+      flex-direction: row;
+      align-content: center;
+      list-style-type: none;
+      gap: 2rem;
+    }
+
+    &__nav-item {
+      text-align: center;
+      padding: 2rem 0rem;
+      height: 100%;
+    }
+  }
+
+  &__logo {
+    @include logo;
+  }
+}
+
+/* Paragraph title */
+.paragraph__title {
+  @include paragraph__title;
+  @include tablet {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    padding: 0rem 3rem;
+  }
+
+  @include desktop {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    padding: 0rem 3rem;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: $primary--color_black;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
+  position: relative;
+
+  &__paragraph-title {
+    @include paragraph__title;
+    color: $primary--color_white;
+    @include tablet {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__paragraph-text {
+    @include p;
+    color: $primary--color_white;
+  }
+
+  &__bottom-text {
+    font-size: 0.625rem;
+    color: $primary--color_white;
+  }
+
+  &__bottom {
+    padding-top: 3rem;
+  }
+
+  &__bottom-logo {
+    @include logo;
+    @include tablet {
+      position: absolute;
+      top: 2.5rem;
+      right: 1rem;
+    }
+  }
+
+  a {
+    color: $primary--color_white;
+    text-decoration: none;
+  }
+
+  @include tablet {
+    &__socials {
+      display: flex;
+      flex-direction: row;
+      padding: 0 1rem;
+    }
+
+    &__icons {
+      display: flex;
+      gap: 1rem;
+      padding: 42px;
+    }
+
+    h2 {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    &__contacts {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &__paragraph-text {
+      font-size: 16px;
+      line-height: 1.75rem;
+      font-weight: 400;
+      color: #323232;
+      color: #ffffff;
+    }
+  }
+
+  @include desktop {
+    &__socials {
+      display: flex;
+      flex-direction: row;
+      padding: 0 1rem;
+    }
+
+    &__icons {
+      display: flex;
+      gap: 1rem;
+      padding: 42px;
+    }
+
+    h2 {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    &__contacts {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &__paragraph-text {
+      font-size: 16px;
+      line-height: 1.75rem;
+      font-weight: 400;
+      color: #323232;
+      color: #ffffff;
+    }
+  }
+}
