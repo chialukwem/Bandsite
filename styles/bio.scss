@@ -183,8 +183,8 @@
   }
 
   input:invalid {
-    outline: 2px solid red;
-}
+    outline: 2px solid #d22d2d;
+  }
 
   &__button {
     background-color: $primary--color_black;
@@ -201,4 +201,32 @@
       background-color: $secondary--color_darkblack;
     }
   }
+  // &__display {
+  //   display: flex;
+  //   justify-content: center;
+  //   // padding: 1rem;
+  // }
+}
+
+.comments__display {
+  display: flex;
+  flex-direction: column;
+}
+
+p.commentName {
+  font-weight: 600;
+}
+
+p.commentTime {
+  color: $secondary--color_mercury;
+}
+
+.comment__items {
+  border-bottom: 1px solid $secondary--color_mercury;
+  padding: 1rem 9rem;
+}
+
+.comment__name-container {
+    display: flex;
+    justify-content: space-between;
 }

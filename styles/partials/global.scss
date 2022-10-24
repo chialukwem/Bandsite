@@ -50,8 +50,8 @@ h2 {
 p {
   @include p;
   @include tablet {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   @include desktop {
     font-size: 14px;
