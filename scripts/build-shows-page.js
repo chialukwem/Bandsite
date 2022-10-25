@@ -41,11 +41,6 @@ function displayShows(shows) {
     showCard.classList.add("show__card");
     showsDisplay.appendChild(showCard);
 
-    //Create comment Image and append to comment
-    // let commentImage = document.createElement("div");
-    // commentImage.classList.add("commentImage");
-    // commentCard.appendChild(commentImage);
-
     //create show date and append to shows
     let showDate = document.createElement("p");
     showDate.classList.add("showDate");
