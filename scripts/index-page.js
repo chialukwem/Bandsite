@@ -27,33 +27,28 @@ let commentsDisplay = document.querySelector(".comments__display");
 function displayComment(comments) {
   commentsDisplay.innerHTML = "";
   comments.forEach(function (comment) {
-    // create a comment and add to the comment display area
     let commentCard = document.createElement("div");
-    commentCard.classList.add("comment__items");
+    commentCard.classList.add("comment__name-container");
     commentsDisplay.appendChild(commentCard);
 
-    //Create comment Image and append to comment
-    let commentImage = document.createElement("div");
+    let commentImage = document.createElement("img");
     commentImage.classList.add("commentImage");
     commentCard.appendChild(commentImage);
 
     let nameContainer = document.createElement("div");
-    nameContainer.classList.add("comment__name-container");
+    nameContainer.classList.add("comment__items");
     commentCard.appendChild(nameContainer);
 
-    //create comment name and append to comment
     let commentName = document.createElement("p");
     commentName.classList.add("commentName");
     commentName.innerText = comment.Name;
     nameContainer.appendChild(commentName);
 
-    //create a comment timestamp and append the Comment
     let commentTime = document.createElement("p");
     commentTime.classList.add("commentTime");
     commentTime.innerText = comment.Timestamp;
     nameContainer.appendChild(commentTime);
 
-    //create a comment text and append to comment
     let commentText = document.createElement("p");
     commentText.classList.add("commentText");
     commentText.innerText = comment.Comment;

@@ -164,6 +164,12 @@ a {
   padding: 1rem 1rem;
   position: relative;
 
+  &__icons {
+    justify-content: flex-start;
+    gap: 2rem;
+    display: flex;
+  }
+
   &__paragraph-title {
     @include paragraph__title;
     color: $primary--color_white;
@@ -204,7 +210,7 @@ a {
     &__socials {
       display: flex;
       flex-direction: row;
-      padding: 0 1rem;
+      padding: 0rem 1rem;
     }
 
     &__icons {
@@ -231,13 +237,17 @@ a {
       color: #323232;
       color: #ffffff;
     }
+
+    &__bottom-text {
+      padding-left: 1rem;
+  }
   }
 
   @include desktop {
     &__socials {
       display: flex;
       flex-direction: row;
-      padding: 0 1rem;
+      padding: 0rem 6rem;
     }
 
     &__icons {
@@ -264,5 +274,9 @@ a {
       color: #323232;
       color: #ffffff;
     }
+
+    &__bottom-text {
+      padding-left: 6.2rem;
+  }
   }
 }

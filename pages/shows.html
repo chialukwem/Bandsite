@@ -12,7 +12,7 @@
 
   <body>
     <header class="header">
-      <a href="./index.html"
+      <a href="/index.html"
         ><img
           src="/assets/logos/Logo-bandsite.svg"
           class="header__logo"
@@ -32,9 +32,9 @@
     </header>
 
     <section class="page__title">
-      <div>
+      <div class="shows__subheader">
         <p class="paragraph__title">Beautiful Beasts Album</p>
-        <h1>Queen of Yellow x <br />For The Strings</h1>
+        <p class="subheader">Queen of Yellow x For The Strings</p>
       </div>
 
       <div class="iframe">
@@ -51,8 +51,17 @@
 
     <section class="shows">
       <h2>Shows</h2>
+      <div class="shows__label__row">
+        <span>DATE</span>
+        <span>VENUE</span>
+        <span>LOCATION</span>
+      </div>
 
-      <div class="shows__display"></div>
+      <div class="shows__display">
+
+        
+
+      </div>
     </section>
 
     <footer class="footer">
@@ -137,6 +146,7 @@
         </p>
       </div>
     </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
       type="text/javascript"
       src="../scripts/build-shows-page.js"
