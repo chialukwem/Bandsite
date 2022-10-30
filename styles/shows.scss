@@ -1,20 +1,13 @@
 @use "./partials/variables" as *;
 @use "./partials/fonts" as *;
 @use "./partials/mixins" as *;
+@use "./partials/global" as *;
 
 /* Resets */
-// *,
-// *::before,
-// ::after {
-//   box-sizing: border-box;
-// }
-
-html,
-body,
-ul,
-li {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+::after {
+  box-sizing: border-box;
 }
 
 /* General */
@@ -108,7 +101,6 @@ a {
       align-content: center;
       list-style-type: none;
       gap: 2rem;
-      // padding: 0 2rem;
     }
 
     &__nav-item {
@@ -125,7 +117,6 @@ a {
       align-content: center;
       list-style-type: none;
       gap: 2rem;
-      // padding: 0 2rem;
     }
 
     &__nav-item {
@@ -148,23 +139,19 @@ a {
     url("../../assets/images/hero-shows.jpg");
   background-size: cover;
   background-position: 11% 27%;
-  height: 22rem;
+  height: 25rem;
   padding: 1rem 1rem;
 
   @include tablet {
-    height: 23.5rem;
-    font-size: 3.75rem;
-    line-height: 2rem;
-    font-weight: 700;
-    color: #ffffff;
+    height: 34.5rem;
     padding: 0 2rem;
-    margin-bottom: 1.5rem;
   }
 
   @include desktop {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding: 6.5rem;
   }
 }
 
@@ -173,6 +160,21 @@ a {
   line-height: 32px;
   font-weight: 600;
   color: $primary--color_white;
+  width: 64%;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 600;
+    width: 72%;
+  }
+
+  @include desktop {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+    width: 65%;
+  }
 }
 
 .iframe {
@@ -196,7 +198,6 @@ a {
   @include tablet {
     font-size: 1.5rem;
     line-height: 2rem;
-    // font-weight: 400;
   }
 
   @include desktop {
@@ -236,22 +237,21 @@ a {
     }
 
     &__label__row {
-      padding-left: 5rem;
-      width: 64%;
+      width: 72vw;
       justify-content: center;
-      gap: 7rem;
+      gap: 10rem;
     }
   }
 }
 
 .shows__display {
   @include desktop {
-    padding: 0 12rem;
+    padding: 0 4rem;
   }
 }
 
 .show__card {
-  border-bottom: 0.5px solid $secondary--color_mercury;
+  border-bottom: 0.0313rem solid $secondary--color_mercury;
   padding-bottom: 1rem 1rem;
   padding: 1rem 0rem;
 
@@ -266,7 +266,7 @@ a {
     }
 
     button.button {
-      width: 205px;
+      width: 12.8125rem;
     }
   }
 
@@ -279,19 +279,19 @@ a {
   }
 
   p.showDate {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.125rem;
     font-weight: 600;
     color: #323232;
   }
 
   p.showPlace {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
   }
 
   p.showLocation {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
   }
 
@@ -369,12 +369,12 @@ a {
     &__icons {
       display: flex;
       gap: 1rem;
-      padding: 42px;
+      padding: 2.625rem;
     }
 
     h2 {
-      font-size: 36px;
-      line-height: 44px;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
       color: $primary--color_white;
     }
 
@@ -385,7 +385,7 @@ a {
     }
 
     &__paragraph-text {
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 1.75rem;
       font-weight: 400;
       color: $primary--color_black;
@@ -405,13 +405,14 @@ a {
 
     &__icons {
       display: flex;
-      gap: 1rem;
-      padding: 42px;
+      gap: 2rem;
+      padding: 2.625rem;
+      margin-left: 10rem;
     }
 
     h2 {
-      font-size: 36px;
-      line-height: 44px;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
       color: $primary--color_white;
     }
 
@@ -422,7 +423,7 @@ a {
     }
 
     &__paragraph-text {
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 1.75rem;
       font-weight: 400;
       color: #323232;

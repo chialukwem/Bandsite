@@ -52,7 +52,7 @@
 @mixin button {
   background-color: $primary--color_black;
   color: $primary--color_white;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   padding: 1rem 3rem;
   font-size: 1rem;
   font-weight: 600;

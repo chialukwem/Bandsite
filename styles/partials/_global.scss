@@ -54,8 +54,8 @@ p {
     line-height: 1.375rem;
   }
   @include desktop {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -215,13 +215,13 @@ a {
 
     &__icons {
       display: flex;
-      gap: 1rem;
-      padding: 42px;
+      gap: 2rem;
+      padding: 2.625rem;
     }
 
     h2 {
-      font-size: 36px;
-      line-height: 44px;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
     }
 
     &__contacts {
@@ -231,7 +231,7 @@ a {
     }
 
     &__paragraph-text {
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 1.75rem;
       font-weight: 400;
       color: #323232;
@@ -240,7 +240,7 @@ a {
 
     &__bottom-text {
       padding-left: 1rem;
-  }
+    }
   }
 
   @include desktop {
@@ -252,13 +252,14 @@ a {
 
     &__icons {
       display: flex;
-      gap: 1rem;
-      padding: 42px;
+      gap: 2rem;
+      padding: 2.625rem;
+      margin-left: 10rem;
     }
 
     h2 {
-      font-size: 36px;
-      line-height: 44px;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
     }
 
     &__contacts {
@@ -268,7 +269,7 @@ a {
     }
 
     &__paragraph-text {
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 1.75rem;
       font-weight: 400;
       color: #323232;
@@ -277,6 +278,6 @@ a {
 
     &__bottom-text {
       padding-left: 6.2rem;
-  }
+    }
   }
 }
