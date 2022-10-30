@@ -33,7 +33,7 @@ const showCommentsList = () => {
       commentTime.classList.add("commentTime");
       commentTime.innerText = new Date(comment.timestamp).toLocaleDateString(
         "en-US"
-      ); //  comment.timestamp;
+      );
       nameContainer.appendChild(commentTime);
 
       const commentText = document.createElement("p");
@@ -58,10 +58,14 @@ commentForm.addEventListener("submit", (event) => {
     comment: commentValue,
     timestamp: timeStamp.toLocaleDateString(),
   };
-  showCommentsList.unshift(newComment);
 
-  getComments(showCommentsList);
-  event.target.reset();
+  const addComment = axios.post(link, newComment);
+  addComment.then((response) => {
+    event.target.reset();
+    showCommentsList();
+  });
+  // getComments.unshift(newComment);
+
 });
 
 // let defaultCommentsArray = [
