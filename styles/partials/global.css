@@ -3,17 +3,17 @@
 /* breakpoints */
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/fonts/Alternative-files/AvenirNextLTPro.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/fonts/Alternative-files/AvenirNextLTProDemi.ttf") format("truetype");
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/fonts/Alternative-files/AvenirNextLTProBold.ttf") format(truetype);
   font-weight: 700;
 }
 /* h2 mixin */
@@ -21,6 +21,7 @@
 /* paragraph title mixin */
 /* p mixin */
 /* logo styling mixin */
+/*button*/
 /* Resets */
 *,
 *::before,
@@ -70,8 +71,8 @@ h1 {
 }
 
 p {
-  font-size: 1.1875rem;
-  line-height: 1.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: 400;
   color: #323232;
 }
@@ -83,8 +84,8 @@ p {
 }
 @media screen and (min-width: 1280px) {
   p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -193,6 +194,11 @@ a {
   padding: 1rem 1rem;
   position: relative;
 }
+.footer__icons {
+  justify-content: flex-start;
+  gap: 2rem;
+  display: flex;
+}
 .footer__paragraph-title {
   font-size: 1rem;
   line-height: 1.375rem;
@@ -206,8 +212,8 @@ a {
   }
 }
 .footer__paragraph-text {
-  font-size: 1.1875rem;
-  line-height: 1.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: 400;
   color: #323232;
   color: #ffffff;
@@ -238,16 +244,16 @@ a {
   .footer__socials {
     display: flex;
     flex-direction: row;
-    padding: 0 1rem;
+    padding: 0rem 1rem;
   }
   .footer__icons {
     display: flex;
-    gap: 1rem;
-    padding: 42px;
+    gap: 2rem;
+    padding: 2.625rem;
   }
   .footer h2 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .footer__contacts {
     display: flex;
@@ -255,27 +261,31 @@ a {
     justify-content: space-around;
   }
   .footer__paragraph-text {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.75rem;
     font-weight: 400;
     color: #323232;
     color: #ffffff;
+  }
+  .footer__bottom-text {
+    padding-left: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__socials {
     display: flex;
     flex-direction: row;
-    padding: 0 1rem;
+    padding: 0rem 6rem;
   }
   .footer__icons {
     display: flex;
-    gap: 1rem;
-    padding: 42px;
+    gap: 2rem;
+    padding: 2.625rem;
+    margin-left: 10rem;
   }
   .footer h2 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .footer__contacts {
     display: flex;
@@ -283,10 +293,13 @@ a {
     justify-content: space-around;
   }
   .footer__paragraph-text {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.75rem;
     font-weight: 400;
     color: #323232;
     color: #ffffff;
+  }
+  .footer__bottom-text {
+    padding-left: 6.2rem;
   }
 }/*# sourceMappingURL=global.css.map */

@@ -1,69 +1,54 @@
-let shows = [
-  {
-    Date: "Mon Sept 06 2021",
-    Venue: "Ronald Lane",
-    Location: "San Francisco, CA",
-  },
-  {
-    Date: "Tue Sept 21 2021",
-    Venue: "Pier 3 East",
-    Location: "San Francisco, CA",
-  },
-  {
-    Date: "Fri Oct 15 2021",
-    Venue: "View Lounge",
-    Location: "San Francisco, CA",
-  },
-  {
-    Date: "Sat Nov 06 2021",
-    Venue: "Hyatt Agency",
-    Location: "San Francisco, CA",
-  },
-  {
-    Date: "Fri Nov 26 2021",
-    Venue: "Moscow Center",
-    Location: "San Francisco, CA",
-  },
-  {
-    Date: "Wed Dec 15 2021",
-    Venue: "Press Club",
-    Location: "San Francisco, CA",
-  },
-];
+const link =
+  "https://project-1-api.herokuapp.com/showdates?api_key=725f8d16-faaf-4a24-9ab4-b99a62a72a3c";
 
-let showsDisplay = document.querySelector(".shows__display");
+const showsDisplay = document.querySelector(".shows__display");
 
-function displayShows(shows) {
-  //   showsDisplay.innerHTML = "";
-  shows.forEach(function (show) {
-    // create a show card and add to the show display area
-    let showCard = document.createElement("div");
-    showCard.classList.add("show__card");
-    showsDisplay.appendChild(showCard);
+const showTable = () => {
+  const getShows = axios.get(link);
+  getShows.then((response) => {
+    const showsArray = response.data;
 
-    //Create comment Image and append to comment
-    // let commentImage = document.createElement("div");
-    // commentImage.classList.add("commentImage");
-    // commentCard.appendChild(commentImage);
+    showsArray.forEach((show) => {
+      const showCard = document.createElement("div");
+      showCard.classList.add("show__card");
+      showsDisplay.appendChild(showCard);
 
-    //create show date and append to shows
-    let showDate = document.createElement("p");
-    showDate.classList.add("showDate");
-    showDate.innerText = show.Date;
-    showCard.appendChild(showDate);
+      const showDate = document.createElement("p");
+      const dateLabel = document.createElement("p");
+      dateLabel.innerHTML = "DATE";
+      dateLabel.classList.add("show__label");
+      showCard.appendChild(dateLabel);
 
-    //create a venue and append to shows
-    let showVenue = document.createElement("p");
-    showVenue.classList.add("commentTime");
-    showVenue.innerText = show.Venue;
-    showCard.appendChild(showVenue);
+      showDate.classList.add("showDate");
+      showDate.innerText = new Date(Number(show.date)).toDateString();
+      showCard.appendChild(showDate);
 
-    //create a location text and append to shows
-    let showLocation = document.createElement("p");
-    showLocation.classList.add("showLocation");
-    showLocation.innerText = show.Location;
-    showCard.appendChild(showLocation);
+      const venueLabel = document.createElement("p");
+      venueLabel.innerHTML = "VENUE";
+      venueLabel.classList.add("show__label");
+      showCard.appendChild(venueLabel);
+
+      const showVenue = document.createElement("p");
+      showVenue.classList.add("showPlace");
+      showVenue.innerText = show.place;
+      showCard.appendChild(showVenue);
+
+      const locationLabel = document.createElement("p");
+      locationLabel.innerHTML = "LOCATION";
+      locationLabel.classList.add("show__label");
+      showCard.appendChild(locationLabel);
+
+      const showLocation = document.createElement("p");
+      showLocation.classList.add("showLocation");
+      showLocation.innerText = show.location;
+      showCard.appendChild(showLocation);
+
+      const showButton = document.createElement("button");
+      showButton.classList.add("button");
+      showCard.appendChild(showButton);
+      showButton.innerHTML = "BUY TICKETS";
+    });
   });
-}
+};
 
-displayShows(shows);
+showTable();

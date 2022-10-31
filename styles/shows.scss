@@ -1,20 +1,13 @@
 @use "./partials/variables" as *;
 @use "./partials/fonts" as *;
 @use "./partials/mixins" as *;
+@use "./partials/global" as *;
 
 /* Resets */
-// *,
-// *::before,
-// ::after {
-//   box-sizing: border-box;
-// }
-
-html,
-body,
-ul,
-li {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+::after {
+  box-sizing: border-box;
 }
 
 /* General */
@@ -108,7 +101,6 @@ a {
       align-content: center;
       list-style-type: none;
       gap: 2rem;
-      // padding: 0 2rem;
     }
 
     &__nav-item {
@@ -125,7 +117,6 @@ a {
       align-content: center;
       list-style-type: none;
       gap: 2rem;
-      // padding: 0 2rem;
     }
 
     &__nav-item {
@@ -144,33 +135,45 @@ a {
 .page__title {
   display: flex;
   flex-direction: column;
-  // justify-content: flex-start;
-  // align-items: center;
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
     url("../../assets/images/hero-shows.jpg");
   background-size: cover;
   background-position: 11% 27%;
-  height: 26.5rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  color: #ffffff;
+  height: 25rem;
   padding: 1rem 1rem;
 
   @include tablet {
-    height: 31.5rem;
-    font-size: 3.75rem;
-    line-height: 2rem;
-    font-weight: 700;
-    color: #ffffff;
+    height: 34.5rem;
     padding: 0 2rem;
-    margin-bottom: 1.5rem;
   }
 
   @include desktop {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding: 6.5rem;
+  }
+}
+
+.subheader {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: $primary--color_white;
+  width: 64%;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 600;
+    width: 72%;
+  }
+
+  @include desktop {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+    width: 65%;
   }
 }
 
@@ -195,13 +198,110 @@ a {
   @include tablet {
     font-size: 1.5rem;
     line-height: 2rem;
-    // font-weight: 400;
   }
 
   @include desktop {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 400;
+  }
+}
+
+/* shows*/
+.shows {
+  @include body__padding;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+
+  &__label__row {
+    display: none;
+  }
+
+  @include tablet {
+    &__label__row {
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+      width: 62%;
+      font-size: 12px;
+      font-weight: 600;
+      color: $secondary--color_mercury;
+    }
+  }
+
+  @include desktop {
+    padding-left: 1rem;
+
+    h2 {
+      padding-left: 6rem;
+    }
+
+    &__label__row {
+      width: 72vw;
+      justify-content: center;
+      gap: 10rem;
+    }
+  }
+}
+
+.shows__display {
+  @include desktop {
+    padding: 0 4rem;
+  }
+}
+
+.show__card {
+  border-bottom: 0.0313rem solid $secondary--color_mercury;
+  padding-bottom: 1rem 1rem;
+  padding: 1rem 0rem;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    p.show__label {
+      display: none;
+    }
+
+    button.button {
+      width: 12.8125rem;
+    }
+  }
+
+  &:hover {
+    background-color: $secondary--color_mercury;
+  }
+
+  &:active {
+    background-color: $secondary--color_alabaster;
+  }
+
+  p.showDate {
+    font-size: 1rem;
+    line-height: 1.125rem;
+    font-weight: 600;
+    color: #323232;
+  }
+
+  p.showPlace {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  p.showLocation {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  p.show__label {
+    color: $secondary--color_mercury;
+    font-weight: 600;
+  }
+
+  button {
+    @include button;
   }
 }
 
@@ -212,6 +312,12 @@ a {
   flex-direction: column;
   padding: 1rem 1rem;
   position: relative;
+
+  &__icons {
+    justify-content: flex-start;
+    gap: 2rem;
+    display: flex;
+  }
 
   h2 {
     color: $primary--color_white;
@@ -263,12 +369,12 @@ a {
     &__icons {
       display: flex;
       gap: 1rem;
-      padding: 42px;
+      padding: 2.625rem;
     }
 
     h2 {
-      font-size: 36px;
-      line-height: 44px;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
       color: $primary--color_white;
     }
 
@@ -279,11 +385,14 @@ a {
     }
 
     &__paragraph-text {
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 1.75rem;
       font-weight: 400;
-      color: #323232;
-      color: #ffffff;
+      color: $primary--color_black;
+      color: $primary--color_white;
+    }
+    &__bottom-text {
+      padding-left: 1rem;
     }
   }
 
@@ -291,18 +400,19 @@ a {
     &__socials {
       display: flex;
       flex-direction: row;
-      padding: 0 1rem;
+      padding: 0 6rem;
     }
 
     &__icons {
       display: flex;
-      gap: 1rem;
-      padding: 42px;
+      gap: 2rem;
+      padding: 2.625rem;
+      margin-left: 10rem;
     }
 
     h2 {
-      font-size: 36px;
-      line-height: 44px;
+      font-size: 2.25rem;
+      line-height: 2.75rem;
       color: $primary--color_white;
     }
 
@@ -313,11 +423,15 @@ a {
     }
 
     &__paragraph-text {
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 1.75rem;
       font-weight: 400;
       color: #323232;
       color: #ffffff;
+    }
+
+    &__bottom-text {
+      padding-left: 6.2rem;
     }
   }
 }

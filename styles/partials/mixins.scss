@@ -46,3 +46,21 @@
   height: 1.25rem;
   margin: 1rem 1rem;
 }
+
+/*button*/
+
+@mixin button {
+  background-color: $primary--color_black;
+  color: $primary--color_white;
+  border-radius: 0.25rem;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  border: none;
+
+  &:hover {
+    border-style: none;
+    background-color: $secondary--color_darkblack;
+  }
+}
